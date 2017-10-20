@@ -10,11 +10,22 @@ import { Vehiculos } from '../shared/vehiculos.model';
   styleUrls: ['./vehiculos-list.component.css']
 })
 export class VehiculosListComponent implements OnInit {
-  employeelist : AngularFireList<Vehiculos>;
+  vehiculosList : Vehiculos[];
   constructor(private vehiculosService : VehiculosService ) { }
 
   ngOnInit() {
-    this.vehiculosService.getData();
+    var x= this.vehiculosService.getData();
+    x.snapshotChanges().subscribe(item =>{
+      this.vehiculosList = [];
+      item.forEach(element=>{
+        var y = element.payload.toJSON();
+        y["$key"] = element.key;
+        this.vehiculosList.push(y as Vehiculos);
+      });
+    
+    });
   }
-
+onItemClick(veh : Vehiculos){
+  this.vehiculosService.selectedVehiculos = veh;
+}
 }

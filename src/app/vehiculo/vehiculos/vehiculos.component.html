@@ -1,4 +1,5 @@
-<form #vehiculosForm="ngForm"(ngSubmit)="onSubmit()">
+<form #vehiculosForm="ngForm"(ngSubmit)="onSubmit(vehiculosForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehiculosService.selectedVehiculos.$key">
   <div class="form-group">
     <label>Placa</label>
     <input class="form-control" name="placa" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa" placeholder="Placa Vehiculo">
@@ -20,7 +21,7 @@
     <input class="form-control" name="valor" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa" placeholder="Valor a pagar">
   </div>
 <div class="form-group">
-      <button type="submit" class="btn btn-default">
+      <button type="submit" class="btn btn-default" [disable]="!vehiculosForm.valid">
         <i class="fa fa-floppy-o"></i>Crear</button>
       <button type="button" class="btn btn-default">
           <i class="fa fa-trash"></i>Eliminar</button>

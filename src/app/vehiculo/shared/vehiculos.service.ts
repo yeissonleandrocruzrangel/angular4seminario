@@ -26,4 +26,15 @@ export class VehiculosService {
     
     })
   }
+
+  updateVehiculos(veh : Vehiculos){
+    this.vehiculosList.update(veh.$key,{
+      placa : veh.placa,
+      tipocombustible : veh.tipocombustible,
+      cantidad:veh.cantidad,
+      valor : veh.valor
+    
+    })
+  }
+
 }
