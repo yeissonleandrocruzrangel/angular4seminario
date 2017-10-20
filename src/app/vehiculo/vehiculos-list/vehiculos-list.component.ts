@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { VehiculosService } from '../shared/vehiculos.service';
+
 @Component({
   selector: 'app-vehiculos-list',
   templateUrl: './vehiculos-list.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiculosListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vehiculosService : VehiculosService ) { }
 
   ngOnInit() {
   }

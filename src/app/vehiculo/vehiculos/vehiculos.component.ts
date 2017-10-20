@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { VehiculosService } from '../shared/vehiculos.service';
 
 @Component({
   selector: 'app-vehiculos',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehiculosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vehiculosService : VehiculosService ) { }
 
   ngOnInit() {
   }
