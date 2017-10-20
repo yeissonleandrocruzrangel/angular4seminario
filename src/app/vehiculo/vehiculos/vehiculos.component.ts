@@ -15,4 +15,10 @@ export class VehiculosComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+  onSubmit(form : NgForm)
+  {
+    this.vehiculosService.insertVehiculos(form.value);
+  }
 }
