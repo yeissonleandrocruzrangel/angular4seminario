@@ -20,9 +20,9 @@ export class VehiculosComponent implements OnInit {
 
   onSubmit(form : NgForm)
   {
-    if (form.value.$key=='')
+    if (form.value.$key==null)
       this.vehiculosService.insertVehiculos(form.value);
-      else
+    else
       this.vehiculosService.updateVehiculos(form.value);
     this.resetForm(form)
   }
@@ -32,7 +32,7 @@ export class VehiculosComponent implements OnInit {
     if (form != null)
       form.reset();
     this.vehiculosService.selectedVehiculos = {
-      $key : '',
+      $key : null,
       placa : '',
       tipocombustible : '',
       cantidad : 0,
