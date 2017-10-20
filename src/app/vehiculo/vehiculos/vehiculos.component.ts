@@ -39,4 +39,12 @@ export class VehiculosComponent implements OnInit {
       valor : 0,
     }
   }
+
+  onDelete(form : NgForm){
+    if(confirm('Esta seguro de elminar este vehiculo ?')==true)
+    {
+      this.vehiculosService.deleteVehiculos(form.value.$key);
+      this.resetForm(form);
+    }
+  }
 }

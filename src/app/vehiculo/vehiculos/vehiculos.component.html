@@ -23,7 +23,7 @@
 <div class="form-group">
       <button type="submit" class="btn btn-default" [disable]="!vehiculosForm.valid">
         <i class="fa fa-floppy-o"></i>Crear</button>
-      <button type="button" class="btn btn-default">
+      <button type="button" class="btn btn-default" *ngIf="vehiculosService.selectedVehiculo.$key!=''"(click)="onDelete(vehiculoForm)">
           <i class="fa fa-trash"></i>Eliminar</button>
       <button type="button" class="btn btn-default"(click)="resetForm(vehiculosForm)">
           <i class="fa fa-repeat"></i>Limpiar</button>

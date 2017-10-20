@@ -37,4 +37,8 @@ export class VehiculosService {
     })
   }
 
+  deleteVehiculos(key : string){
+    this.vehiculosList.remove(key);
+  }
+
 }
