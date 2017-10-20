@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
+import { VehiculosComponent } from './vehiculo/vehiculos/vehiculos.component';
+import { VehiculosListComponent } from './vehiculo/vehiculos-list/vehiculos-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VehiculoComponent
+    VehiculoComponent,
+    VehiculosComponent,
+    VehiculosListComponent
   ],
   imports: [
     BrowserModule
