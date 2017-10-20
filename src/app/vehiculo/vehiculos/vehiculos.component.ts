@@ -13,6 +13,7 @@ export class VehiculosComponent implements OnInit {
   constructor(private vehiculosService : VehiculosService ) { }
 
   ngOnInit() {
+    this.resetForm();
   }
 
 
@@ -20,5 +21,19 @@ export class VehiculosComponent implements OnInit {
   onSubmit(form : NgForm)
   {
     this.vehiculosService.insertVehiculos(form.value);
+    this.resetForm(form)
+  }
+
+  resetForm(form? : NgForm)
+  {
+    if (form != null)
+      form.reset();
+    this.vehiculosService.selectedVehiculos = {
+      $key : '',
+      placa : '',
+      tipocombustible : '',
+      cantidad : 0,
+      valor : 0,
+    }
   }
 }
