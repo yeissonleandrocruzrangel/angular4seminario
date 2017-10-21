@@ -1,0 +1,32 @@
+<form #vehiculoForm="ngForm" (ngSubmit)="onSubmit(vehiculoForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehiculoService.selectedVehiculo.$key">
+  <div class="form-group">
+    <label>Paca</label>
+    <input class="form-control" name="placa" #name="ngModel" [(ngModel)]="vehiculoService.selectedVehiculo.placa" placeholder="Ingrese la Placa del Vehiculo" required>
+  </div>
+  <div class="form-group">
+    <label>Tipo de Combustible</label>
+    <input class="form-control" name="tipo" #tipo="ngModel" [(ngModel)]="vehiculoService.selectedVehiculo.tipo" placeholder="Gasolina, ACPM, GAS ...">
+  </div>
+  <div class="form-group">
+    <label>Cantidad de Galones</label>
+    <input class="form-control" name="cantidad" #cantidad="ngModel" [(ngModel)]="vehiculoService.selectedVehiculo.cantidad" placeholder="0">
+  </div>
+  <div class="form-group">
+      <label>Costo</label>
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input class="form-control" name="costo" #costo="ngModel" [(ngModel)]="vehiculoService.selectedVehiculo.costo" placeholder="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-default" [disabled]="!vehiculoForm.valid">
+     <i class="fa fa-floppy-o"></i> Guardar</button> 
+    <button type="button" class="btn btn-default" *ngIf="vehiculoService.selectedVehiculo.$key!=null" (click)="onDelete(vehiculoForm)">
+        <i class="fa fa-trash"></i> Eliminar</button>
+    <button type="button" class="btn btn-default" (click)="resetForm(vehiculoForm)">
+        <i class="fa fa-repeat"></i> Limpiar Campos</button>
+  </div>
+</form>

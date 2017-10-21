@@ -6,18 +6,18 @@ import { FormsModule} from '@angular/forms'
 
 
 import { AppComponent } from './app.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { EmployeeComponent } from './employees/employee/employee.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
+import { VehiculosComponent } from './vehiculos/vehiculos.component';
+import { VehiculoComponent } from './vehiculos/vehiculo/vehiculo.component';
+import { VehiculoListComponent } from './vehiculos/vehiculo-list/vehiculo-list.component';
 import {environment} from '../environments/environment'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent,
-    EmployeeComponent,
-    EmployeeListComponent
+    VehiculosComponent,
+    VehiculoComponent,
+    VehiculoListComponent
   ],
   imports: [
     BrowserModule,
