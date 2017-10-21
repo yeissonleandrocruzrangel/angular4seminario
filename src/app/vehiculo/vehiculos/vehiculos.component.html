@@ -2,15 +2,15 @@
   <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="vehiculosService.selectedVehiculos.$key">
   <div class="form-group">
     <label>Placa</label>
-    <input class="form-control" name="placa" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa" placeholder="Placa Vehiculo">
+    <input class="form-control" name="placa" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa">
   </div>
   <div class="form-group">
       <label>Tipo Combustible</label>
-      <input class="form-control" name="tipocombustible" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.tipocombustible" placeholder="Combustible Vehiculo">
+      <input class="form-control" name="tipocombustible" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.tipocombustible" >
     </div>
     <div class="form-group">
         <label>Cantidad De Galones</label>
-        <input class="form-control" name="cantidad" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa" placeholder="cantidad">
+        <input class="form-control" name="cantidad" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.cantidad">
       </div>
   <div class="form-group">
       <label>Valor a Pagar</label>
@@ -18,7 +18,7 @@
       <div class="input-gruop-addon">
         <i class="fa fa-dollar"></i>
     
-    <input class="form-control" name="valor" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.placa" placeholder="Valor a pagar">
+    <input class="form-control" name="valor" #name="ngModel"[(ngModel)]="vehiculosService.selectedVehiculos.valor" placeholder="0">
   </div>
 <div class="form-group">
       <button type="submit" class="btn btn-default" [disable]="!vehiculosForm.valid">
