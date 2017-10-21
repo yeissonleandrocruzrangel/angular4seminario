@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyCVBDEdt3pVBPY5HGtFY8bRi27IBYXloVk",
-    authDomain: "registrarvehiculo.firebaseapp.com",
-    databaseURL: "https://registrarvehiculo.firebaseio.com",
-    projectId: "registrarvehiculo",
-    storageBucket: "registrarvehiculo.appspot.com",
-    messagingSenderId: "816856052096"
+    apiKey: "AIzaSyBL5-Q8seYSTQojePWqNX2Te3nvW2rT9uQ",
+    authDomain: "vehiculos-91fa1.firebaseapp.com",
+    databaseURL: "https://vehiculos-91fa1.firebaseio.com",
+    projectId: "vehiculos-91fa1",
+    storageBucket: "vehiculos-91fa1.appspot.com",
+    messagingSenderId: "322910402657"
   }
 };
