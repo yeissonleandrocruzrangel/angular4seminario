@@ -38,7 +38,7 @@ export class EmployeeComponent implements OnInit {
   }
 
   onDelete(form: NgForm) {
-    if (confirm('Are you sure to delete this record ?') == true) {
+    if (confirm('Seguro de eliminar este registro ?') == true) {
       this.employeeService.deleteEmployee(form.value.$key);
       this.resetForm(form);
     }
